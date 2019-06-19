@@ -86,8 +86,8 @@ class SKCloseButton: SKImageButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup(imageName)
-        showFrame = CGRect(x: marginX, y: marginY, width: size.width, height: size.height)
-        hideFrame = CGRect(x: marginX, y: -marginY, width: size.width, height: size.height)
+        showFrame = CGRect(x: marginX - 5, y: marginY + 11, width: 50, height: 50)
+        hideFrame = CGRect(x: marginX - 5, y: marginY + 11, width: 50, height: 50)
     }
 }
 
