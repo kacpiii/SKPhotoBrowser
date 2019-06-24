@@ -293,14 +293,14 @@ extension SKZoomingScrollView: SKDetectingViewDelegate {
 
 extension SKZoomingScrollView: SKDetectingImageViewDelegate {
     func handleImageViewSingleTap(_ touchPoint: CGPoint) {
-        guard let browser = browser else {
-            return
-        }
-        if SKPhotoBrowserOptions.enableSingleTapDismiss {
-            browser.determineAndClose()
-        } else {
-            browser.toggleControls()
-        }
+//        guard let browser = browser else {
+//            return
+//        }
+//        if SKPhotoBrowserOptions.enableSingleTapDismiss {
+//            browser.determineAndClose()
+//        } else {
+//            browser.toggleControls()
+//        }
     }
     
     func handleImageViewDoubleTap(_ touchPoint: CGPoint) {
