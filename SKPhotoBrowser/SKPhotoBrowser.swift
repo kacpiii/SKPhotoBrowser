@@ -70,7 +70,6 @@ open class SKPhotoBrowser: UIViewController {
         self.init(photos: photos, initialPageIndex: 0)
     }
     
-    @available(*, deprecated)
     public convenience init(originImage: UIImage, photos: [SKPhotoProtocol], animatedFromView: UIView) {
         self.init(nibName: nil, bundle: nil)
         self.photos = photos
