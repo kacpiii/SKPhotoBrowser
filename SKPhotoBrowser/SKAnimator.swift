@@ -177,13 +177,19 @@ private extension SKAnimator {
                 browser.showButtons()
                 self.backgroundView.alpha = 1.0
                 self.resizableImageView?.frame = finalFrame
-            },
+        },
             completion: { (_) -> Void in
                 browser.view.alpha = 1.0
                 browser.view.isHidden = false
-                self.backgroundView.isHidden = true
-                self.resizableImageView?.alpha = 0.0
-            })
+                
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.backgroundView.alpha = 0.0
+                }, completion: { (_) in
+                    self.backgroundView.alpha = 1.0
+                    self.backgroundView.isHidden = true
+                    self.resizableImageView?.alpha = 0.0
+                })
+        })
     }
     
     func dismissAnimation(_ browser: SKPhotoBrowser, completion: (() -> Void)? = nil) {
