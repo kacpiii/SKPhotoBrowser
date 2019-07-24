@@ -179,11 +179,10 @@ private extension SKAnimator {
                 self.resizableImageView?.frame = finalFrame
         },
             completion: { (_) -> Void in
-                browser.view.alpha = 1.0
                 browser.view.isHidden = false
-                
+                browser.view.alpha = 0.0
                 UIView.animate(withDuration: 0.2, animations: {
-                    self.backgroundView.alpha = 0.0
+                    browser.view.alpha = 1.0
                 }, completion: { (_) in
                     self.backgroundView.alpha = 1.0
                     self.backgroundView.isHidden = true

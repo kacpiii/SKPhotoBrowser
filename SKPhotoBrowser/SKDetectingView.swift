@@ -37,6 +37,6 @@ class SKDetectingView: UIView {
     }
     
     func handleDoubleTap(_ touch: UITouch) {
-        delegate?.handleDoubleTap(self, touch: touch)
+        //delegate?.handleDoubleTap(self, touch: touch)
     }
 }
